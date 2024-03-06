@@ -9,7 +9,8 @@ async function startProcess(name, execPath) {
         env: {
             STORAGE_PORT: 27017,
             DRIVER_MODULE: '@screeps/driver',
-            MODFILE: 'mods.json'
+            MODFILE: 'mods.json',
+            STORAGE_HOST:'47.119.16.249'
         }
     });
 }
