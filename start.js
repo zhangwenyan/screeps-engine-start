@@ -7,7 +7,7 @@ async function startProcess(name, execPath) {
     console.log('startProcess', name, execPath);
     cp.fork(path.resolve(execPath), {
         env: {
-            STORAGE_PORT: 27017,
+            STORAGE_PORT: 27027,
             DRIVER_MODULE: '@screeps/driver',
             MODFILE: 'mods.json',
             STORAGE_HOST: '47.119.16.249',
