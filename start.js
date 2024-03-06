@@ -10,7 +10,8 @@ async function startProcess(name, execPath) {
             STORAGE_PORT: 27017,
             DRIVER_MODULE: '@screeps/driver',
             MODFILE: 'mods.json',
-            STORAGE_HOST:'47.119.16.249'
+            STORAGE_HOST: '47.119.16.249',
+            runner_threads: 2
         }
     });
 }
@@ -20,4 +21,11 @@ async function startProcess(name, execPath) {
 
 startProcess('engine_main',
     path.resolve(path.dirname(require.resolve('@screeps/engine')), 'main.js')
+)
+startProcess('engine_runner',
+    path.resolve(path.dirname(require.resolve('@screeps/engine')), 'runner.js')
+)
+
+startProcess('engine_processor',
+    path.resolve(path.dirname(require.resolve('@screeps/engine')), 'processor.js')
 )
